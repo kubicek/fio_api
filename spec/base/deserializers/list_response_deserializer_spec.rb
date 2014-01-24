@@ -5,18 +5,18 @@ describe FioAPI::ListResponseDeserializer do
   describe "instance attributes" do
 
     it "should respond to account" do
-      FioAPI::ListResponseDeserializer.new.should respond_to(:account)
+      FioAPI::ListResponseDeserializer.new('{}','').should respond_to(:account)
     end
 
     it "should respond to transactions" do
-      FioAPI::ListResponseDeserializer.new.should respond_to(:transactions)
+      FioAPI::ListResponseDeserializer.new('{}','').should respond_to(:transactions)
     end
 
   end
 
   describe "deserialization" do
     before(:each) do
-      @deserializer = FioAPI::ListResponseDeserializer.new
+      @deserializer = FioAPI::ListResponseDeserializer.new('{}','')
     end
 
     it "deserialize account info" do
