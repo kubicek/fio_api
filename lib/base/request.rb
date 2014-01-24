@@ -3,7 +3,7 @@ require 'httparty'
 module FioAPI
   class Request < FioAPI::Base
 
-    include HTTParty
+    include HTTMultiParty
 
     # Consant of base part of uri for requesting
     base_uri 'https://www.fio.cz/ib_api/rest/'

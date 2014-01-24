@@ -4,6 +4,7 @@ require "base/account"
 require "base/transaction"
 require "base/list"
 require "base/request"
+require "base/domestic_transaction"
 
 module FioAPI
   # == Returns:
