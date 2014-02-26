@@ -1,4 +1,4 @@
-require 'httparty'
+require 'httmultiparty'
 
 module FioAPI
   class Request < FioAPI::Base
