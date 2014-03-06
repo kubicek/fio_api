@@ -27,15 +27,14 @@ Gem::Specification.new do |s|
     "fio_api.gemspec",
     "lib/base.rb",
     "lib/base/account.rb",
-    "lib/base/deserializer.rb",
     "lib/base/deserializers/list_response_deserializer.rb",
+    "lib/base/domestic_transaction.rb",
     "lib/base/list.rb",
     "lib/base/request.rb",
     "lib/base/transaction.rb",
     "lib/fio_api.rb",
     "lib/utils/hash.rb",
     "spec/base/account_spec.rb",
-    "spec/base/deserializer_spec.rb",
     "spec/base/deserializers/list_response_deserializer_spec.rb",
     "spec/base/list_spec.rb",
     "spec/base/request_spec.rb",
@@ -54,27 +53,33 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<httparty>, [">= 0.9.0"])
+      s.add_runtime_dependency(%q<httmultiparty>, [">= 0"])
+      s.add_runtime_dependency(%q<builder>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 2.8.0"])
       s.add_development_dependency(%q<rspec-mocks>, [">= 2.8.0"])
       s.add_development_dependency(%q<rdoc>, [">= 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.2.0"])
       s.add_development_dependency(%q<jeweler>, [">= 1.8.4"])
+      s.add_development_dependency(%q<webmock>, [">= 0"])
     else
-      s.add_dependency(%q<httparty>, [">= 0.9.0"])
+      s.add_dependency(%q<httmultiparty>, [">= 0"])
+      s.add_dependency(%q<builder>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 2.8.0"])
       s.add_dependency(%q<rspec-mocks>, [">= 2.8.0"])
       s.add_dependency(%q<rdoc>, [">= 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.2.0"])
       s.add_dependency(%q<jeweler>, [">= 1.8.4"])
+      s.add_dependency(%q<webmock>, [">= 0"])
     end
   else
-    s.add_dependency(%q<httparty>, [">= 0.9.0"])
+    s.add_dependency(%q<httmultiparty>, [">= 0"])
+    s.add_dependency(%q<builder>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 2.8.0"])
     s.add_dependency(%q<rspec-mocks>, [">= 2.8.0"])
     s.add_dependency(%q<rdoc>, [">= 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.2.0"])
     s.add_dependency(%q<jeweler>, [">= 1.8.4"])
+    s.add_dependency(%q<webmock>, [">= 0"])
   end
 end
 
